@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>that yoga thang</title>
   </head>
-  <body>
+  <body data-spy="scroll">
     <div class="frame-1">
       <nav class="container-fluid m-3">
-        <ul class="nav">
+        <ul class="nav d-flex align-items-center">
           <li class="nav-item">
-            <a href="index.html">@baviyoga</a>
+            <a class="nav-link fs-2" href="index.html">@baviyoga</a>
+          </li>
+          <li class="ms-auto nav-item">
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a href="about.html">About</a>
+            <a class="nav-link" href="classes.html">Classes</a>
           </li>
           <li class="nav-item">
-            <a href="classes.html">Classes</a>
+            <button type="button" name="button">
+              <svg>
+
+              </svg>
+            </button>
           </li>
-          <li class="nav-item">
-            <a href="insta"><image src="insta.png"></a>
-          </li>
-          <li class="nav-item">
-            <button onclick="book.html">
+          <li class="nav-item pr-auto">
+            <button class="nav-link " onclick="book.html">
               Book a Class
             </button>
           </li>
@@ -50,23 +54,20 @@
       </div>
     </div>
     <img src="theend.jpg" alt="sun salutations">
-    <footer>
-      <nav class="container-fluid">
-          <ul class="nav">
-            <li>
-              <a href="about.html">About</a>
+    <footer class="container-fluid">
+      <nav class="flex-1 card-footer bg-light">
+          <ul class="nav container-fluid justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
-            <li>
-              <a href="classes.html">Classes</a>
+            <li class="nav-item">
+              <a class="nav-link" href="classes.html">Classes</a>
             </li>
-            <li>
-              <a href="book.html">Book a Class</a>
-            </li>
-            <li>
-              <a href="insta"><img src="insta.png"></a>
+            <li class="nav-item">
+              <a class="nav-link" href="book.html">Book a Class</a>
             </li>
           </ul>
       </nav>
-    </footer>
+     </footer>
   </body>
 </html>
