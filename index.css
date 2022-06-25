@@ -109,10 +109,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: var(--bs-heading-color); }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw); }
+  font-size: calc(1.575rem + 3.9vw); }
   @media (min-width: 1200px) {
     h1, .h1 {
-      font-size: 2.5rem; } }
+      font-size: 4.5rem; } }
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw); }
@@ -136,7 +136,7 @@ h5, .h5 {
   font-size: 1.25rem; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 0.875rem; }
 
 p {
   margin-top: 0;
@@ -6462,7 +6462,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-monospace) !important; }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important; }
+  font-size: calc(1.575rem + 3.9vw) !important; }
 
 .fs-2 {
   font-size: calc(1.325rem + 0.9vw) !important; }
@@ -6477,7 +6477,7 @@ textarea.form-control-lg {
   font-size: 1.25rem !important; }
 
 .fs-6 {
-  font-size: 1rem !important; }
+  font-size: 0.875rem !important; }
 
 .fst-italic {
   font-style: italic !important; }
@@ -9228,7 +9228,7 @@ textarea.form-control-lg {
     text-align: center !important; } }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important; }
+    font-size: 4.5rem !important; }
 
   .fs-2 {
     font-size: 2rem !important; }
