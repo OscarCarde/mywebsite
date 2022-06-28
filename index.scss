@@ -1,3 +1,11 @@
 $h6-font-size: 1rem * .875;
 $h1-font-size: 3rem * 1.5;
+
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
+$custom-display-sizes: (
+  7: 2.5rem,
+  8: 2rem
+);
+$display-font-sizes: map-merge($display-font-sizes, $custom-display-sizes);
 @import "node_modules/bootstrap/scss/bootstrap";
