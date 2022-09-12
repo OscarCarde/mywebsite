@@ -1,3 +1,4 @@
+/*@import "node_modules/bootstrap/scss/_utilities";*/
 /*!
  * Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -9297,5 +9298,17 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important; } }
+/*$utilities: map-merge(
+  $utilities,
+  ("opacity": map-merge(
+    map-get($utiilties, "opacity"),
+    (values: map-merge(
+      map-get(map-get($utilities, "opacity"), values),
+      (87.5: .875),
+        )
+      )
+    )
+  )
+)*/
 
 /*# sourceMappingURL=index.css.map */

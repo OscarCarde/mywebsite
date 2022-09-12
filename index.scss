@@ -3,6 +3,7 @@ $h1-font-size: 3rem * 1.5;
 $navbar-light-toggler-border-color: transparent;
 @import "node_modules/bootstrap/scss/_functions";
 @import "node_modules/bootstrap/scss/_variables";
+/*@import "node_modules/bootstrap/scss/_utilities";*/
 $custom-display-sizes: (
   7: 2.5rem,
   8: 2rem,
@@ -11,3 +12,16 @@ $custom-display-sizes: (
 );
 $display-font-sizes: map-merge($display-font-sizes, $custom-display-sizes);
 @import "node_modules/bootstrap/scss/bootstrap";
+
+/*$utilities: map-merge(
+  $utilities,
+  ("opacity": map-merge(
+    map-get($utiilties, "opacity"),
+    (values: map-merge(
+      map-get(map-get($utilities, "opacity"), values),
+      (87.5: .875),
+        )
+      )
+    )
+  )
+)*/

@@ -42,13 +42,60 @@
           </div>
         </nav>
         <!--- background to header for visibility --->
-        <header class="d-flex flex-grow-1 container-lg mb-3 align-items-end ">
-          <div class="row">
-            <div class="col py-5 mb-2 bg-warning bg-gradient bg-opacity-10">
-              <h1 class="display-4 lh-base py-3"><strong>Compassionately mindful </strong>vinyasa to help you ground, uplift or restore.</h1>
-              <div class="display-8">
-                <p class="lh-base">I invite You to practice with me in a curious, playful & instinctual manner.</p>
-                <p class="lh-base"><em>"Warm, accepting, open, attentive... a calming space"</em></p>
+        <header class="d-flex flex-grow-1 container-lg mb-3 align-items-end">
+          <div class="row ">
+            <!---Carousel--->
+            <div id = "main_carousel" class="col py-5 mb-2 bg-warning bg-gradient bg-opacity-10 opacity-75 carousel slide carousel-fade" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <!---slide Main--->
+                <div class="carousel-item active">
+                  <h1 class="display-4 lh-base py-3 "><strong>Compassionately mindful </strong>vinyasa to help you ground, uplift or restore.</h1>
+                  <div class="display-8">
+                    <p class="lh-base">I invite You to practice with me in a curious, playful & instinctual manner.</p>
+                    <p class="lh-base"><em>"Warm, accepting, open, attentive... a calming space"</em></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <p class="display-4">About</p>
+                  <div class="display-8">
+                    With a passion to combine whole body mental health & the arts, Violetta did her 200 hours Alliance Teacher Training at the loveliest of studios at Yoga On The Lane, learning from Naomi Annand & Adam Hocke. With a degree in Psychology, she is currently in training to become a drama & movement therapist. <br>
+                    Having experienced complicated grief and trauma herself, she is passionate about holding space for others to hrlp thm work through difficult life experiences. As the physical practice of yoga asanas helped her soothe her nervous system and reconnect back into her body, so did the teachings of yoga aid her mental wellbeing. She is therefore keen to support each and every individual on their journey journey to finding home in their own skin with the yogic tools of breath, movement and meditation.
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <p class="display-4">Trainings</p>
+                  <ul class="display-8">
+                    Trainings
+                    <li>
+                      The Royal Central School of Speech and Drama <br>
+                        Drama & Movement Therapy MA
+                    </li>
+                    <li>
+                      Yoga On The Lane <br>
+                        200 hours Yoga Alliance Accredited Teacher Training
+                    </li>
+                    <li>
+                      University College London <br>
+                        Psychology BSc
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item display-4">
+                  <q cite=""><em>Perhaps everything that frightens us is, in its deep essence, something helpless that wants our love</em></q> - Rainer Maria Rilke
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#main_carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#main_carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
             <div class="col-1">
@@ -57,7 +104,7 @@
         </header>
       </div>
 <!--- About me --->
-    <section>
+    <!---<section class="bg-dark bg-gradient">
       With a passion to combine whole body mental health & the arts, Violetta did her 200 hours Alliance Teacher Training at the loveliest of studios at Yoga On The Lane, learning from Naomi Annand & Adam Hocke. With a degree in Psychology, she is currently in training to become a drama & movement therapist. <br>
       Having experienced complicated grief and trauma herself, she is passionate about holding space for others to hrlp thm work through difficult life experiences. As the physical practice of yoga asanas helped her soothe her nervous system and reconnect back into her body, so did the teachings of yoga aid her mental wellbeing. She is therefore keen to support each and every individual on their journey journey to finding home in their own skin with the yogic tools of breath, movement and meditation.
       <ul>
@@ -76,7 +123,7 @@
         </li>
       </ul>
       "Perhaps everything that frightens us is, in its deep essence, something helpless that wants our love" - Rainer Maria Rilke
-    </section>
+    </section>--->
 <!--- schedule and locations instead of upcoming classes --->
     <section style="background-color: #383830"class="d-flex flex-column flex-grow-1 align-items-center">
       <div class="container-xl  mt-5">
@@ -98,6 +145,7 @@
         <button class="flex-grow-1 btn btn-secondary py-4 px-5 my-5 ms-4" onclick="classes.html">View More</button>
       </div>
     </section>
+
   <!--- Dump that section --->
     <section style="background-color: #A8A6A1"class="container-fluid d-flex align-self-stretch p-5">
       <div class="container d-flex flex-md-row flex-column">
