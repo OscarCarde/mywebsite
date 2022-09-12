@@ -1,0 +1,13 @@
+@media (min-width: 600px){
+    #header-img{
+      background-image: url('baviyoga_photos/f15.jpg');
+      background-size:cover;
+    }
+}
+
+@media (max-width: 599px){
+    #header-img{
+      background-image: url('baviyoga_photos/f15_mobile.jpg');
+      background-size:cover;
+    }
+}
