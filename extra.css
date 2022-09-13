@@ -12,6 +12,15 @@
     }
 }
 
+#classes {
+  background-image: url('baviyoga_photos/f24.jpg');
+  background-size:cover;
+}
+
+#main_carousel {
+  max-width: 1200px;
+}
+
 .classes{
   max-width: 450px;
 }

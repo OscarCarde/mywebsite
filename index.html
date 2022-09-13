@@ -11,7 +11,7 @@
   <body style="overflow-x:hidden;"class="text-white" data-spy="scroll">
       <div class="d-flex flex-column justify-content-around min-vh-100" id="header-img">
         <!--- background to navbar for visibility / improve layout of navbar- -->
-        <nav class="navbar bg-dark bg-gradient bg-opacity-25 navbar-expand-md  sticky-top">
+        <nav class="navbar bg-dark bg-gradient bg-opacity-25 navbar-expand-md fixed-top">
           <a class="navbar-brand fs-2 px-5 link-light" href="index.html">@baviyoga</a>
           <button class="me-3 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
@@ -34,19 +34,35 @@
                 </button>
               </li>
               <li class="nav-item pe-auto d-flex ">
-                <button class="btn btn-secondary fs-6 flex-grow-1 align-self-stretch py-4 px-5" onclick="window.location.href='https://calendly.com/baviyoga';">
+                <button class="btn btn-secondary fs-6 flex-grow-1 align-self-stretch py-4 px-5" data-bs-toggle="modal" data-bs-target="#calendly-main">
                   Book a Class
                 </button>
               </li>
             </ul>
           </div>
         </nav>
+        <div class="modal fade" id="calendly-main" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <!-- Calendly inline widget begin -->
+              <div class="modal-body calendly-inline-widget " style="min-width:320px;height:580px;" data-auto-load="false">
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                <script>
+                  Calendly.initInlineWidget({
+                  url: 'https://calendly.com/baviyoga/'
+                  });
+                </script>
+              </div>
+              <!-- Calendly inline widget end -->
+            </div>
+          </div>
+        </div>
         <!--- background to header for visibility --->
-        <header class="d-flex flex-grow-1 container-lg mb-3 align-items-end">
-          <div class="row ">
+        <header class="d-flex flex-grow-1 container-lg mb-3 ">
             <!---Carousel--->
-            <div id = "main_carousel" class="col py-5 mb-2 carousel carousel-fade " >
-              <div class="carousel-inner  ">
+            <div id = "main_carousel" class="py-5 mb-2 carousel carousel-fade d-flex" >
+              <div class="carousel-inner d-flex align-items-end">
                 <!---slide Main--->
                 <div class="carousel-item active bg-warning bg-gradient bg-opacity-10 p-4">
                   <h1 class="display-4 lh-base py-3 "><strong>Compassionately mindful </strong>vinyasa to help you ground, uplift or restore.</h1>
@@ -55,7 +71,7 @@
                     <p class="lh-base"><em>"Warm, accepting, open, attentive... a calming space"</em></p>
                   </div>
                 </div>
-                <div class="carousel-item bg-warning bg-gradient bg-opacity-10 p-4">
+                <div class="carousel-item bg-warning bg-gradient bg-opacity-10 p-4 align-self-start">
                   <p class="display-4">About</p>
                   <div class="display-7">
                     With a passion to combine whole body mental health & the arts, Violetta did her 200 hours Alliance Teacher Training at the loveliest of studios at Yoga On The Lane, learning from Naomi Annand & Adam Hocke. With a degree in Psychology, she is currently in training to become a drama & movement therapist. <br>
@@ -95,60 +111,90 @@
                 </div>
               </div>
             </div>
-            <div class="col-1">
-            </div>
-          </div>
           <!--- carousel controls --->
-          <div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#main_carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#main_carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <div class="align-self-end">
+              <button class="carousel-control-prev" type="button" data-bs-target="#main_carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#main_carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#main_carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
             </div>
-          </div>
         </header>
       </div>
 <!--- schedule and locations instead of upcoming classes --->
-    <section style="background-color: #383830"class="d-flex flex-column flex-grow-1 align-items-center">
-      <div class="container-xl  mt-5">
-        <h2 class="display-5 ms-4">Classes</h2>
-      </div>
-      <div class="container d-flex justify-content-around flex-wrap text-center  align-items-center  my-5">
-      <!---  <img class="img-fluid"src="baviyoga_photos/F9.jpg" alt=""> --->
-        <div class="bg-dark bg-opacity-25 card  classes my-5">
-            <h4 class="card-title display-8">FLOW & RESTORE yoga class</h4>
-            <p class="card-body">Compassionately mindful vinyasa to help you ground, uplift or restore.
-              I invite You to practice with me in a curious, playful & instinctual manner.<br>
-              Mats and props are provided, you only need to bring your water. :)</p>
-            <p>Duration: 45 minutes</p>
-            <p>Pricing: &pound12 drop-in / &pound55 five-class-card <br>
-              You can pay with cash/card at the venue.</p>
-              <p>Location: PT Lab, 366 Forest Rd, E17 5JF</p>
-            <button class="btn btn-warning p-3  m-5"type="button" name="book" onclick="window.location.href='https://calendly.com/baviyoga/45-min-flow-restore-yoga-class-1';">Book A Class</button>
+      <section style="background-color: #383830"class="d-flex flex-column flex-grow-1 align-items-center" id="classes">
+        <div class="container-xl  mt-5">
+          <h2 class="display-5 ms-4">Classes</h2>
         </div>
-        <div class="bg-dark bg-opacity-25 card classes ">
-            <h4 class="card-title display-8">MINDFUL & RESTORATIVE yoga in the park classes</h4>
-            <p class="card-body "> <a href="https://www.instagram.com/explore/tags/parkyoga/">#parkyogaclasses</a> 🌱 are now on while the weather allows <br>
-              Any requests are very welcome! <br>
-              Come if you wish to flow together. 🌞</p>
-            <p>Duration: 1 hour <br>
-              4pm every Saturday</p>
-            <p>Pricing: Free! (Donations welcomed!)</p>
-            <p>Location: Clissold Park (exact location sent out privately)</p>
-            <button class="btn btn-warning p-3 m-5"type="button" name="book" onclick="window.location.href='https://calendly.com/baviyoga/mindful-restorative-yoga-in-the-park';">Book A Class</button>
+        <div class="container d-flex justify-content-around flex-wrap text-center  align-items-center  my-5">
+          <div class="bg-dark bg-opacity-75 card  classes my-5">
+              <h4 class="card-title display-8">FLOW & RESTORE yoga class</h4>
+              <p class="card-body">Compassionately mindful vinyasa to help you ground, uplift or restore.
+                I invite You to practice with me in a curious, playful & instinctual manner.<br>
+                Mats and props are provided, you only need to bring your water. :)</p>
+              <p>Duration: 45 minutes</p>
+              <p>Pricing: &pound12 drop-in / &pound55 five-class-card <br>
+                You can pay with cash/card at the venue.</p>
+                <p>Location: PT Lab, 366 Forest Rd, E17 5JF</p>
+              <button class="btn btn-warning p-3  m-5"type="button" name="book" data-bs-toggle="modal" data-bs-target="#flow-restore">Book A Class</button>
+          </div>
+          <div class="modal fade" id="flow-restore" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- Calendly inline widget begin -->
+                <div class="modal-body calendly-inline-widget " style="min-width:320px;height:580px;" data-auto-load="false">
+                  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                  <script>
+                    Calendly.initInlineWidget({
+                    url: 'https://calendly.com/baviyoga/45-min-flow-restore-yoga-class-1?hide_event_type_details=1'
+                    });
+                  </script>
+                </div>
+                <!-- Calendly inline widget end -->
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark bg-opacity-75 card classes ">
+              <h4 class="card-title display-8">MINDFUL & RESTORATIVE yoga in the park classes</h4>
+              <p class="card-body "> <a href="https://www.instagram.com/explore/tags/parkyoga/">#parkyogaclasses</a> 🌱 are now on while the weather allows <br>
+                Any requests are very welcome! <br>
+                Come if you wish to flow together. 🌞</p>
+              <p>Duration: 1 hour <br>
+                4pm every Saturday</p>
+              <p>Pricing: Free! (Donations welcomed!)</p>
+              <p>Location: Clissold Park (exact location sent out privately)</p>
+              <button class="btn btn-warning p-3  m-5"type="button" name="book" data-bs-toggle="modal" data-bs-target="#mindful">Book A Class</button>
+          </div>
+          <div class="modal fade" id="mindful" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- Calendly inline widget begin -->
+                <div class="modal-body calendly-inline-widget " style="min-width:320px;height:580px;" data-auto-load="false">
+                  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                  <script>
+                    Calendly.initInlineWidget({
+                    url: 'https://calendly.com/baviyoga/mindful-restorative-yoga-in-the-park?hide_event_type_details=1'
+                    });
+                  </script>
+                </div>
+                <!-- Calendly inline widget end -->
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <!--- link to insta overlay --->
     <img class="img-fluid" src="baviyoga_photos/f22.jpg" alt="sun salutations">
