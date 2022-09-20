@@ -24,3 +24,8 @@
 .classes{
   max-width: 450px;
 }
+
+#carousel-controls {
+  max-height:100px;
+  max-width: 100px;
+}
