@@ -29,3 +29,7 @@
   max-height:100px;
   max-width: 100px;
 }
+
+.fixed-top {
+  background-image: linear-gradient(to bottom, white, transparent, transparent);
+}
